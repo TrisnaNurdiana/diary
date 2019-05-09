@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<ScrollPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="795.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="diary.LoginController">
+  <content>
+    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="396.0" prefWidth="793.0">
+         <children>
+            <TextField fx:id="TFTitle" layoutX="43.0" layoutY="42.0" onKeyPressed="#press" prefHeight="25.0" prefWidth="247.0" promptText="Title" />
+            <TextArea fx:id="TFDesc" layoutX="43.0" layoutY="76.0" onKeyPressed="#press" prefHeight="200.0" prefWidth="249.0" promptText="Description" />
+            <Button fx:id="BSave" layoutX="43.0" layoutY="351.0" mnemonicParsing="false" onAction="#actionSave" onKeyPressed="#press" prefHeight="25.0" prefWidth="250.0" text="save" />
+            <TableView fx:id="TVDiary" layoutX="308.0" layoutY="41.0" onKeyPressed="#press" onMouseClicked="#klikTable" prefHeight="342.0" prefWidth="470.0">
+              <columns>
+                <TableColumn fx:id="colTitle" prefWidth="207.0" text="Title" />
+                <TableColumn fx:id="colWriter" prefWidth="132.0" text="Writer" />
+                  <TableColumn fx:id="colDate" prefWidth="130.0" text="Date" />
+              </columns>
+            </TableView>
+            <Label layoutX="28.0" layoutY="1.0" onKeyPressed="#press" prefHeight="32.0" prefWidth="215.0" text="TryDiary">
+               <font>
+                  <Font name="Times New Roman" size="25.0" />
+               </font>
+            </Label>
+            <ComboBox fx:id="CBWriter" layoutX="43.0" layoutY="319.0" onKeyPressed="#press" prefHeight="25.0" prefWidth="250.0" promptText="writer" />
+            <Pane layoutX="129.0" layoutY="18.0" onKeyPressed="#press" prefHeight="4.0" prefWidth="153.0" style="-fx-background-color: black;" />
+            <Pane layoutX="18.0" layoutY="16.0" onKeyPressed="#press" prefHeight="4.0" prefWidth="10.0" style="-fx-background-color: black;" />
+            <PasswordField fx:id="PFPass" layoutX="266.0" layoutY="178.0" onKeyReleased="#actionLogin" prefHeight="17.0" prefWidth="256.0" />
+            <TextField fx:id="TFDate" layoutX="45.0" layoutY="284.0" onKeyPressed="#press" prefHeight="25.0" prefWidth="247.0" promptText="Date" />
+         </children></AnchorPane>
+  </content>
+</ScrollPane>
